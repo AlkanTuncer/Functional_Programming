@@ -1,0 +1,52 @@
+
+FUNCTIONAL PROGRAMMING
+
+    1. Fonksiyonel programlama, yalnızca fonksiyonların kullanılmasıyla yazılmış programlardır.
+    2. Bir uygulamanın durumu (state) ve verilerini doğrudan değiştirmeden, matematiksel fonksiyonlar yardımıyla
+    sonuç üretilmesini sağlayan programlama yaklaşımıdır.
+
+  FP'de değişkene değer atama işlemi genellikle yapılmaz. Yapılacaksa değişkenin değeri kopyalanır ve yeni bir değişken
+yaratılır. Bunun sebebi Tanım 2 de belirttiği gibi uygulamanın durumunu değiştirmemek ve çok kanallı (multi-thread) yani bir
+programda aynı anda birden çok fazla işin yapılması durumunda, aynı kaynağa erişmekten dolayı kilitlenmelerin oluşmasını engellemektir.
+
+  FP'de çıktı değeri, fonksiyona girdi olarak verilen parametre değerlerine bağlıdır. Yani fonksiyon aynı parametreler ile defalarca
+çağrılırsa, işlemin sonunda aynı sonuç üretilir.
+
+
+LAMBDA CALCULUS
+
+ * Church Turing tezi ile literatüre kazandırılmıştır. Doğal sayılar üzerinde tanımlı olan bir fonksiyon, kaynak sınırı göz ardı edilirse,
+bir insan tarafından hesaplanabilir ve aynı zamanda Turing makinesi (Yazdığımız bütün programlar) tarafından hesaplanan fonksiyonlar üzerine kurulu tezdir.
+ * Diğer bir deyişle sadece parametreleri ve işleyişi ile tanımlanan isimsiz fonksiyonlara Lambda ifadeleri denir.Bu ifadeler ile yapılan hesaplama
+modeline Lambda Calculus denir. lambda(x):x*x*x olarak tanımlanmışsa lambda(2) fonksiyon kullanımı 8 değerini üretir.
+
+
+              FP                                                                               OOP
+-Değiştirilemez Veriler (Immutable Data)                                    -Değiştirilebilir Veriler kullanılır. (Mutable data)
+-Bildirimsel(Declarative) Programlama Modeli                                -Emirsel(Imperative) Programlama Modeli
+-'Ne yapıyorsun' durumuna odaklanmıştır. 'Interface'                        -'Nasıl yapıyorsun' durumuna odaklanmıstır. 'Nesne'
+-Paralel programlama için uygundur.                                         -Paralel programlama için uygun değildir.
+-Fonksiyonlar yan etkiden arındırılmıştır.                                  -Fonksiyon yan etkilere mağruzdur.
+-Özyenileme kavramını kullanarak yenileme işlemlerini yapar.                -Yineleme işlemlerinde döngüler(for loop, foreach) kullanılır.
+
+
+Functional Programming
+1. First Class Functions/Citizen  - OOP'de bu Object'tir. FP'de fonksiyonlardır(Higher Order Functions).
+2. No Side Effects - Bir fonksiyonun dısardan gelen durumlara göre farklı cıktı üretmesi durumuna Yan etki denir. FP'de fonksiyonlar yan etkilerden arındırılmıs olmalı.
+3. Lazy Evaluation - Bir değişkenin değerinin, mecbur kalınana kadar hesaplanmaması durumudur. Değişkenin değerine ihtiyac oldugu ana kadar hesaplama yapılmaz.
+4. Statelessness - Fonksiyon uygulamaya ait herhangi bir durumun bilgisini tutmaz ve değiştirmez.
+5. Immutable Data - Verilerin değerinin değişmemesi durumudur.
+6. Pure Functions - Referential Transparency - Sadece girdi değerini alıp, global bir değişkene etki etmeden cıktı deger üreten fonksiyonlardır.
+
+
+SAF FONKSİYONLAR : Çalıştırılma anında herhangi bir yan etkiye maruz kalmayan ve parametre olarak verilen değerlere göre cıktı üreten fonksiyonlara denir.
+    Saf fonksiyonlar tanımlanırken dikkat edilecek unsurlar :
+        1. Durumsuzluk (No State)
+        2. Yan etkilerden arındırılma (No Side Effect)
+        3. final değişkenler/değiştirilemez (final)
+
+
+HIGHER ORDER FUNCTIONS : Parametre olarak bir veya birden çok fonksiyon alan ve sonuc olarak baska bir fonksiyon dönen fonksiyonlara denir.
+Bu Java'da LAMBDA ifadeleri ile sağlanır.
+
+    (parametre) -> {fonksiyon gövdesi}
