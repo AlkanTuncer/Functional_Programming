@@ -11,4 +11,9 @@ public class ConstructorApp {
 
     }
 }
-record Car(String name,double price){}
+record Car(String name,double price) implements Printable{
+    @Override
+    public void print(String value) {
+        System.out.println(value+" : "+this);
+    }
+}
