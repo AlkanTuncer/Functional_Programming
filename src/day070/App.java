@@ -17,6 +17,8 @@ public class App {
         );
         System.out.println(carList);
 
+        carList.stream().filter( item -> item.model()=="A5").forEach(System.out::println);
+
     }
 
     public static void show(int a,int b){
